@@ -1,92 +1,30 @@
 #include <iostream>
 #include <vector>
-#include <string>
+
+#include "AlgoritmoX.h"
 
 using namespace std;
 
-class AlgoritmoX
-{
-	private:
-		int clave;
-		string mensaje;
-		string Alfabeto;
-	public:
-		AlgoritmoX();
-		void setClave(int clave);
-		void setMensaje();
-		string cifrado(string mensaje);
-		string descifrado(string mensaje);
-		
-};
-
-class Emisor{
-	private:
-		int clave;
-		string mensaje;
-		string Alfabeto;
-	public:
-		Emisor();
-		void setClave(int clave);	
-		string cifrado(string mensaje);
-};
-
-class Receptor{
-	private:
-		int clave;
-		string mensaje;
-		string Alfabeto;
-	public:
-		Receptor();
-		void setClave(int clave);
-		string descifrado(string mensaje);		
-};
-
-void Emisor::setClave(int clave){
-	
-}
-
-string Emisor::cifrado(string mensaje){
-
-}
-
-void Receptor::setClave(int clave){
-	
-}
-
-string Receptor::descifrado(string mensaje){
-
-}
-
 int main() {
-	vector<string>mensaje;
 	
-	int filas,colms, tamano, k;
+	int clave[2] = {6, 9};   //Ingresar la clave
 	
-	AlgoritmoX Emisor();
-	AlgoritmoX Receptor();
+				//Creacion de variables a partir de las clases
 	
-	cout << "Ingresa número de filas: " << endl;
-	cin >> filas;
+	AlgoritmoX algoritmo;       //Creación de la variable algoritmo
+
+	Emisor emisor(clave);       //Creación de la variable emisor
+	Receptor receptor(clave);   //Creación de la variable receptor
 	
-	tamano = mensaje.lenght();
+	string mensaje = "To decrypt, all one must do is wrap the leather strip around the rod and read across";  //El mensaje 
 	
-	colms = tamano / filas;
+	string msgCifrado = algoritmo.cifrado(emisor.clave, mensaje);   //Codificación del mensaje original
 	
-	if(tamano % filas > 0){
-			colms++;
-	}	
-	char matriz[filas][colms];
+	string msgDescifrado = algoritmo.descifrado(receptor.clave, msgCifrado);   //Decodificación del mensaje luego de ser codificado
 	
-	for(int fil=0; fil < filas; fil++){
-		for(int col=0; col < colms; col++){
-			matriz[fil][col] = mensaje[k];
-		}
-	}
-	
-	for(size_t i=0; i < mensaje.size(); i++){
-		string msjcifrado = Emisor.cifrado(mensaje);
-		string menoriginal = Receptor.descifrado(msjcifrado);
-	}
-		
+	cout << "Mensaje Cifrado:\n " << msgCifrado << endl;   //Mostrar el mensaje codificado
+	cout << endl;
+	cout << "Mensaje Descifrado:\n " << msgDescifrado << endl;   //Mostrar el mensaje descifrado
 	return 0;
 }
+

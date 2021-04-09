@@ -2,6 +2,7 @@
 #include <vector>
 
 #include "AlgoritmoX.h"
+#include "AlgoritmoX.cpp"
 
 using namespace std;
 

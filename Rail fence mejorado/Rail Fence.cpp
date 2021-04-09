@@ -108,18 +108,37 @@ string RailFence::descifrado(int clave, string &mensaje){
 	}
 	return MsgDescifrado;
 }
+
+void print(){
+	cout << endl;
+}
+
 //---------------------------------------------------------------------------------------
 //---------------------------------------------------------------------------------------
 Emisor::Emisor(int clv){
 	clave = clv;  //Declaración de la variable clave
 }
+
 string Emisor::EmitirMsg(string mensaje){
 	cout << "Mensaje Cifrado: ";
-	return cifrado(clave, mensaje);  //Devuelve el mensaje cifrado
+	return cifrado(clave, mensaje);
 }
+
+string Emisor::RecibirMsg(string mensaje){
+	cout << "Mensaje Descifrado: ";
+	return descifrado(clave, mensaje);  //Devuelve el mensaje cifrado
+}
+
 Receptor::Receptor(int clv){
 	clave = clv;  //Declaración de la variable clave
 }
-void Receptor::RecibirMsg(string &mensaje){
-	cout << "\nMensaje Descifrado: " << descifrado(clave, mensaje) << endl;  //Devuelve el mensaje descifrado
+string Receptor::EmitirMsg(string &mensaje){
+	cout << "\nMensaje Cifrado: " << cifrado(clave, mensaje) << endl;  //Devuelve el mensaje descifrado
 }
+
+void Receptor::RecibirMsg(string &mensaje){
+	cout << "\nMensaje Original: " << descifrado(clave, mensaje) << endl;
+	print();
+	print();
+}
+

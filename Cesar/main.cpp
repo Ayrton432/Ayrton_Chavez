@@ -41,4 +41,11 @@ int main() {
 	}
 }
 
+//Prueba  Las palomas vuelan más rapido, en verano que en invierno.  clave 4
+//Encriptada  Ti5h2it1ui5h51vhuá5h4i2qli5,hmvh8m4iv1h37mhmvhqv8qm4v1H
 
+//rjsyfojehnkxfitehtsehjyfxe1yfsiteqfehqf2je ejsejqeh1xyteijefqljgxfefgyzxfhzf  clave 5    Dayevska
+//mentaje cifsado con cetas 1tando la cla2e   en el c1sto de algebsa abtusacua
+
+//mtqfev1jezfq clave     Rodrigo Aranzaens
+//

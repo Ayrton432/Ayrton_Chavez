@@ -11,8 +11,8 @@ class Afin{
 	public:
 		Afin(string);
 		int inverseA(int claveA, int  claveB);
-		void Emisor(string, int claveA, int claveB);
-		void Receptor(string,int claveA, int claveB);
+		void Cifrado(string, int claveA, int claveB);
+		void Descifrado(string,int claveA, int claveB);
 };
 
 #endif

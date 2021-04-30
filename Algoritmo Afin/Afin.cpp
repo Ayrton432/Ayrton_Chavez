@@ -7,7 +7,10 @@
 
 using namespace std;
 
-string alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ";
+string alfabeto = "abcdefghijklmnopqrstuvwxyz,.-_ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789()";
+
+//Alfabeto de la profesora : "abcdefghijklmnopqrstuvwxyz,.-_ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789()"
+//Mi alfabeto : "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
 
 int Alphabet = alfabeto.length();
 
@@ -28,10 +31,10 @@ Afin::Afin(string message){
 	cout << "Clave B: " << claveB << endl;
 	
 	cout << "\nFuncion de Cifrado: " << endl;
-	Emisor(message, claveA, claveB);
+	Cifrado(message, claveA, claveB);
 	
 	cout << "Funcion de Descifrado: " << endl;
-	Receptor(MsgCifrado, claveA, claveB);	
+	Descifrado(MsgCifrado, claveA, claveB);	
 	
 }
 
@@ -46,8 +49,8 @@ int Afin::inverseA(int claveA, int  claveB){
 	return x;
 }
 
-void Afin::Emisor(string message, int claveA, int claveB){
-	cout << "EMISOR" << endl;
+void Afin::Cifrado(string message, int claveA, int claveB){
+
 	for(int i = 0; i < message.length(); i++) { 
 		MsgCifrado[i] = ' '; 
 	}
@@ -71,8 +74,8 @@ void Afin::Emisor(string message, int claveA, int claveB){
 	cout << endl;
 }
 
-void Afin::Receptor(string MsgCifrado, int claveA, int claveB) {
-	cout << "RECEPTOR" << endl;
+void Afin::Descifrado(string MsgCifrado, int claveA, int claveB) {
+
 	for(int i=0; i < MsgCifrado.length(); i++) { 
 		message[i] = ' '; 
 	}

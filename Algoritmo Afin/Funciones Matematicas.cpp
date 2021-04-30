@@ -2,15 +2,18 @@
 
 using namespace std;
 
-int Euclides(int r1, int r2)
-{
+int Euclides(int r1, int r2) {
 	int r;
-	while (r2>0)
+	while (r2 > 0)
 	{
 		int q; 
-		q = r1/r2;	
-		if (r1 >= 0) { r = r1 - q*r2; }
-		else { r = r1 - (q-1)*r2; }
+		q = r1 / r2;	
+		if (r1 >= 0) { 
+			r = r1 - q*r2; 
+		}
+		else { 
+			r = r1 - (q-1)*r2; 
+		}
 		
 		r1 = r2; 
 		r2 = r;
@@ -18,12 +21,17 @@ int Euclides(int r1, int r2)
 	return r1;
 }
 
-int ExtendedEu(int r1, int r2, int r, bool n)
-{
+int RecursiveEuclides(int a, int b){
+	if (a == 0)
+		return b;
+	return RecursiveEuclides(b % a, a);
+
+}
+
+int ExtendedEu(int r1, int r2, int r, bool n) {
 	int s1 = 1, s2 = 0, s; 
 	int t1 = 0, t2 = 1 , t;
-	while (r2>0)
-	{
+	while (r2 > 0) {
 		int q; 
 		q = r1/r2;	
 		

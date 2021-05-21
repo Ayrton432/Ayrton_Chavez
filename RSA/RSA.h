@@ -1,7 +1,7 @@
 #include <iostream>
 #include <time.h> 
 #include <math.h>
-
+//#include "Funciones Matematicas.cpp"
 using namespace std;
 
 int Euclides(int r1, int r2) {

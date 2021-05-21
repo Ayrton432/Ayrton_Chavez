@@ -1,23 +1,30 @@
 #include <iostream>
-#include "Operador.h"
 
 using namespace std;
 
-void Operador::modulo(int a, int b){
-	c = a / b;
-	d = c / 10;
-	
-	cout << "El residuo de: "<< a << " y " << b<< " es: " << d;
+int modulo(int a, int n) {
+    int q, r;
+    q = a / n;//hallamos el cociente
+    r = a % n;//hallamos el residuo
+    while(r < 0)//mientras que el residuo sea negativo
+    {
+    	q--;//el cociente hallado se reducirá en 1 hasta que el residuo sea positivo
+        r = a - (n * q);
+        cout << r << endl;
+    }
+    return r;
+    
 }
 
 int main(){
+	int a,b;
+	cout << "Ingrese el valor de A: " << endl;
+	cin >> a;
+	cout << "Ingrese el valor de B: " << endl;
+	cin >> b;
 	
-	int a, b;
-	cout << "Ingrese el valor de a: "; cin >> a;
-	cout << "Ingrese el valor de b: "; cin >> b;
+	cout << "El residuo es: " << modulo(a,b) << endl;
 	
-	Operador mod;
-	mod.modulo(a,b);
 	
 	return 0;
 }

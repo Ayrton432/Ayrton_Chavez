@@ -7,7 +7,7 @@ using namespace std;
 
 int main() {
 	
-	string mensaje = "rp9-rBLr90-C-qoA9-rBA9LOdAZLdLr9-rB-9aP-rBpAqLdpA39-d-r9Pq9pqad-pZ0-9r-d9bPcLqA9C9d-aP-doL9cLqB-q-dB-9bpodLBLoA9so";
+	string mensaje = "Todas las palomas, vuelan mucho mas rapido en la epoca de verano que en la de invierno.";
 	//string mensaje = "A veces hace falta dormir de mas, comer por gula, sentir que se odia a quien se dice querer. A veces. A veces hace falta sentarse solo en el parque, dejar que se caiga el helado, que la mirada este perdida en la nada, ir a un sitio porque si, callar, otras escuchar. A veces hace falta detenerse a ver pasar el tiempo.";	
 	Afin afin(mensaje);
 

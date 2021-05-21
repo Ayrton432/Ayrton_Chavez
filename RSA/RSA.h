@@ -162,7 +162,7 @@ int Emisor::inverse(int a) {
   return 1;
 }
 */
-int RSA::calcular(int num, int m){
+int RSA::expo_mod(int num, int m){
   int n = m;
   int rptaMod = num;
   int alCuadrado = num;
@@ -201,13 +201,13 @@ int RSA::cifrado(int num){
 
   d = inverse(e);
   cout << "d: " << d << endl;
-  msjCifrado = calcular(num, e);
+  msjCifrado = expo_mod(num, e);
   return msjCifrado;
 }
 
 int RSA::descifrado(int numCifrado){
   int indice = numCifrado;
-  int msjDescifrado = calcular(indice,d);
+  int msjDescifrado = expo_mod(indice,d);
   return msjDescifrado;
 }
 
